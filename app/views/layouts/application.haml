@@ -23,7 +23,7 @@
           %li
             %a{:href => '/beers'} The Beers
       %section#banner
-        = render :partial => 'welcome/poll' if request.request_uri == '/'
+        = render :partial => 'welcome/poll' if request.fullpath == '/'
         %h2 Monitor. Analyze. Drink
         %p Never be beerless for an "all hands" again.
       = yield
