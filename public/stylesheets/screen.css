@@ -1,0 +1,252 @@
+/* reset - don't modify */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,th,var{font-style:normal;font-weight:normal;}
+p,ol,ul {list-style:none;}
+p, img {padding:0;margin:0;}
+caption,th {text-align:left;}
+q:before,q:after{content:'';}
+abbr,acronym {border:0;}
+/* /reset */
+
+
+/* ------------------------------------------------------------------------------------ */
+/* GLOBAL SETTINGS */
+/* ------------------------------------------------------------------------------------ */
+
+aside, article, section, header, nav { display: block; }
+
+a { color: #3192b7; text-decoration:none; }
+a:hover, a:active { color: #3192b7; text-decoration:underline; }
+
+h1, h2, h3, p, ul { line-height:22px; margin:15px 0 15px 0; }
+h1 { font-size:27px; margin:20px 0; }
+h2 { font-size:21px; }
+h3 { font-size:15px; }
+
+.clear { clear:both; }
+.none { display:none; }
+.phark { display:block; text-indent:-9999px; }
+.relative { position:relative; }
+.right { float:right; }
+.left { float:left; }
+
+img.left {margin:0 20px 10px 0;}
+img.right {margin:0 0 10px 20px;}
+img { border:none; }
+
+.wrapper { margin:0 auto; }
+
+
+/* ------------------------------------------------------------------------------------ */
+/* GENERAL STRUCTURE */
+/* ------------------------------------------------------------------------------------ */
+
+body { 
+	font-size:12px; color:#444; font-family:sans-serif; 
+	background:url(../images/body_short.jpg) repeat-x #e7e7e7;
+}
+
+#wrapper { width:1000px; margin:0 auto; }
+
+header { width:1000px; height:68px; }
+	header h1 { 
+		width:245px; height:126px; 
+		background:url(../images/sprite.png) no-repeat 0 0; 
+		margin:0 0 0 -8px; position:absolute; 
+	}
+
+#banner { 
+	width:1000px; height:261px; 
+	background:url(../images/banner_bg.jpg) no-repeat center top; 
+	margin-bottom:60px;
+}
+#banner h2 { 
+	color:#fff; font-size:42px; 
+	padding-top:110px; margin-bottom:26px;
+	text-shadow:1px 1px 3px #000;
+}
+#banner p { 
+	color:#fff; font-size:22px; 
+	padding:10px 15px; background:#0f7ba5;
+	width:450px; margin-bottom:-8px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	text-align:center;
+	text-shadow:-1px -1px 0 #316377;
+	/*-moz-transform: rotate(1deg);
+	-webkit-transform: rotate(1deg);*/
+}
+#banner p.blue { background:#40819a; }
+
+#nav { float:right; list-style:none; margin:45px 0 0 0; }
+#nav li { display:inline; }
+#nav li a { margin-left:28px; font-weight:bold; color:#fff; }
+
+#kegometrics { 
+  -moz-border-radius:10px;
+	border-radius:10px;
+	-moz-box-shadow: 1px 1px 1px #ccc;
+	-webkit-box-shadow: 1px 1px 1px #ccc;
+	box-shadow: 1px 1px 1px #ccc;
+	width:440px; min-height:558px;
+	background-color: rgba(255,255,255,0.95);
+	position:absolute; padding:20px;
+	margin:73px 0 0 520px;
+}
+#kegometrics .content { float:left; margin-top:-25px; padding-left:3px; }
+#kegometrics h2 { 
+	position:relative; top:-32px; left:-32px; 
+	width:248px; height:56px; 
+	background:url(../images/sprite.png) no-repeat -248px -63px;
+	margin:0; padding:0;
+}
+#kegometrics h3 { color:#222; font-size:20px; margin:12px 0 9px 0; }
+#kegometrics .choose { margin-top:30px; }
+#kegometrics table { width:100%; margin-top:9px; }
+#kegometrics table tr td { padding:9px 7px; }
+#kegometrics table tr .first { width:25px; padding-left:15px; }
+#kegometrics table .even td { background:#eee; }
+#kegometrics .more { clear:both; text-align:right; padding:0; margin-bottom:0; background:none; font-size:12px; text-shadow:none; width:430px; }
+
+#banner .vote { width:100%; background:none; text-align:left; }
+#banner .vote a {
+    -moz-border-radius:5px;
+	border-radius:10px;
+	-moz-box-shadow:0 1px 0 #ececec;
+	-webkit-box-shadow:0 1px 0 #ececec;
+	box-shadow:0 1px 0 #ececec;
+	background:-moz-linear-gradient(90deg, #ececec, #f4f4f4) repeat scroll 0 0 transparent;
+	border:1px solid #d4d4d4;
+	color:#666; text-shadow:1px 1px 0 #fff;
+	font-size:15px; font-weight:bold; line-height:15px;
+	margin-bottom:10px; padding:11px 0 11px 0;
+	display:inline-block; cursor:pointer;
+	width:100px; text-align:center;
+}
+#banner .vote a:hover {
+	background:-moz-linear-gradient(center top , #599BDC, #3072B3) repeat scroll 0 0 transparent;
+	background:-webkit-gradient(center top , #599BDC, #3072B3) repeat scroll 0 0 transparent;
+	border-color:#518CC6 #518CC6 #2A65A0;
+	color:#FFFFFF;
+	text-decoration:none;
+	text-shadow:-1px -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+#on_tap { 
+    -moz-border-radius:10px;
+	border-radius:10px;
+	-moz-box-shadow: 1px 1px 1px #ccc;
+	-webkit-box-shadow: 1px 1px 1px #ccc;
+	box-shadow: 1px 1px 1px #ccc;
+	width:440px; min-height:320px;
+	background:#fff; padding:20px;
+	margin:-10px 0 45px 0; 
+}
+#on_tap h2 { 
+	position:relative; top:-32px; left:-32px; 
+	width:98px; height:56px; 
+	background:url(../images/sprite.png) no-repeat -254px 0;
+	margin:0; 
+}
+#on_tap .content { width:; float:left; margin-top:-25px; width:200px; padding-left:6px; }
+#on_tap h3 { color:#222; font-size:20px; margin:0 0 9px 0; }
+#on_tap p { margin:9px 0; line-height:19px; font-size:13px; }
+#on_tap .beer_logo { float:right; margin:-50px 6px 17px 0; }
+#on_tap .details strong { margin-right:6px; }
+#on_tap .details span { margin-right:16px; }
+#on_tap .more { clear:both; text-align:right; border-top:1px solid #ddd; padding:7px 10px 0 10px; margin-bottom:0; }
+#on_tap .brewery_link {
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  -moz-box-shadow:0 1px 2px #DDDDDD;
+  -webkit-box-shadow:0 1px 2px #DDDDDD;
+  box-shadow:0 1px 2px #DDDDDD;
+  display:inline-block;
+  font-size:12px; font-weight:bold;
+  line-height:24px; padding:0 9px;
+  text-align:center; color:#444;
+  text-decoration:none;
+  border:1px solid #ccc;
+}
+#on_tap .brewery_link:hover { border:1px solid #aaa; }
+
+.rating {
+  cursor: pointer; 
+  display: block;
+  clear:none;
+  width: 100px;
+  float:left;
+}
+#on_tap .rating { float:right; margin:-28px 0 30px 0; clear: both; }
+.rating:after {
+  content: '.';
+  display: block;
+  height: 0; width: 0;
+  clear: both; visibility: hidden;
+}
+.cancel, .star {
+  float: left;
+  width: 17px; height: 15px;
+  overflow: hidden;
+  text-indent: -999em;
+  cursor: pointer;
+}
+div.done, div.done a { cursor: default; }
+.star, .star a {background: url(../images/star.png) no-repeat 0 0px;}
+.star a {
+  display: block;
+  width: 100%; height: 100%;
+  background-position: 0 0px;
+}
+div.rating div.on a { background-position: 0 -16px; }
+div.rating div.hover a { background-position: 0 -32px; }
+
+#keg_numbers { height:1000px; background:#fff; width:100%; clear:both; }
+
+#footer { 
+	font-size:12px; color:#5a697c; width:100%; height:10px; padding:25px 0 15px 0;
+	background:url(../images/footer.png) repeat-x;
+	position:fixed; bottom:0; z-index:100; text-align:center;
+}
+
+
+
+/* ------------------------------------------------------------------------------------ */
+/* BEERS */
+/* ------------------------------------------------------------------------------------ */
+
+article { clear:both; border-bottom:1px solid #ccc; margin-bottom:35px; float:left; }
+article:hover { background:#f7f7f7; }
+
+.logo { float:left; margin:0; }
+.logo img { padding:8px; border:1px solid #bbb; margin:0 35px 15px 0; background:#fff; }
+.blank { float:left; margin:0; padding:8px; border:1px solid #bbb; margin:0 35px 15px 0; background:#fff; width:190px; height:270px; }
+.line { clear:both; height:1px; border-bottom:1px solid #ccc; margin-bottom:35px; }
+
+/* ------------------------------------------------------------------------------------ */
+/* ADMIN */
+/* ------------------------------------------------------------------------------------ */
+
+#admin_list .beer_name { width:200px; float:left; }
+#admin_list .beer_options { float:left; }
+#admin_list .beer_options a { margin-right:10px; }
+#admin_list li { clear:both; list-style:none; } 
+
+#admin_nav { list-style:none; position:relative; top:-38px; left:250px; }
+#admin_nav li { float:left; margin-right:20px; }
+
+.new_beer { clear:both; margin-top:30px; }
+
+#new_beer, #new_tap { margin-top:25px; }
+#new_beer label, #new_tap label { float:left; width:120px; margin-bottom:5px; }
+#new_beer input, #new_tap input { float:left; margin-bottom:6px; }
+#new_beer select, #new_tap select { float:left; margin-bottom:6px; }
+#new_beer br, #new_tap br { clear:both; }
+#new_beer textarea { width:330px; height:150px; margin-bottom:20px; }
+
+
+
+

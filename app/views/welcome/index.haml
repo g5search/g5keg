@@ -1,0 +1,28 @@
+%section#on_tap
+  %h2.phark On Tap
+  .content
+    %h3= @currently_on_tap ? @currently_on_tap.name : 'No beer on tap :-('
+    - if brewery=@currently_on_tap.brewery rescue false
+      %a{:class => 'brewery_link', :href => "#{brewery.link}"}= brewery.name
+    %p= @currently_on_tap.description if @currently_on_tap
+    %p.details
+      %strong IBU’s
+      %span= @currently_on_tap.ibus if @currently_on_tap
+      %strong Alcohol
+      = @currently_on_tap.alcohol if @currently_on_tap
+    %p
+      %strong Rate Me:
+    %form{:class => 'rating', :title => 'Average Rating: 2', :action => '#'}
+      %label{:for => 'r2', :class => 'avg'} Rate Me!
+      %select#r2
+        %option{:value => 1} 1
+        %option{:value => 2} 2
+        %option{:value => 3} 3
+        %option{:value => 4} 4
+        %option{:value => 5} 5
+      %input{:type => 'button', :value => 'Submit Rating'}
+  %img{:class => 'beer_logo', :src => "/images/beers/#{@currently_on_tap.logo_path if @currently_on_tap}"}/
+  %p.more
+    %a{:href => '#'} More Info
+#keg_numbers
+

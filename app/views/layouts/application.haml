@@ -1,0 +1,30 @@
+!!! 5
+%html
+  %head
+    %meta{:charset=>'utf-8'}
+    %title G5 Kegalytics
+    %link{:rel=>'stylesheet',:href=>'/stylesheets/screen.css',:media=> 'all',:type => 'text/css'}
+    %script{:type => "text/javascript", :src  => "/javascripts/jquery.js"}
+    %script{:type => "text/javascript", :src  => "/javascripts/jquery.rating.js"}
+    :javascript
+      jQuery(function(){
+        jQuery('form.rating').rating().animate({opacity: 'show'}, 2000);
+      });
+  %body
+    #wrapper
+      %header
+        %a{:href => '/'}  
+          %h1.phark G5 Kegalytics
+        %nav#nav
+          %li
+            %a{:href => '#'} On Tap
+          %li
+            %a{:href => '#'} Keg By The Numbers
+          %li
+            %a{:href => '/beers'} The Beers
+      %section#banner
+        = render :partial => 'welcome/poll' if request.request_uri == '/'
+        %h2 Monitor. Analyze. Drink
+        %p Never be beerless for an "all hands" again.
+      = yield
+
