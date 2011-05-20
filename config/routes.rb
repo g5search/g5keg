@@ -52,13 +52,23 @@ G5keg::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  resources :beers
+  resources :beers do
+    member do
+      get 'rate'
+    end
+  end
+
+  # Keg updates
   post '/kegs/rotate(/:beer_id)', :to => 'kegs#rotate', :as => 'rotate'
-  post '/kegs/current_weight/:kilograms', :to => 'kegs#current_weight'
+  post '/kegs/current_weight', :to => 'kegs#current_weight'
+
+  # Auth routes
   match '/login' => 'auth#create'
   match '/logout' => 'auth#destroy'
   match '/setup' => 'auth#setup'
   match 'redirect_to_login' => 'application#redirect_to_login', :as => 'redirect'
+
+  # Index
   root :to => "welcome#index"
 
   # See how all your routes lay out with "rake routes"

@@ -29,8 +29,8 @@ describe KegsController do
   describe '#current_weight' do
     it "updates the current keg's with the posted weight" do
       keg = Factory(:keg, :tapped => Date.today)
-      post :current_weight, :kilograms => 40
-      keg.reload.current_weight.should == 40
+      post :current_weight, {:kg => "40.45"}
+      keg.reload.current_weight.should == 40.45
     end
   end
 end
