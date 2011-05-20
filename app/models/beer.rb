@@ -2,6 +2,7 @@ class Beer < ActiveRecord::Base
   belongs_to :brewery
   scope :on_tap, where(:on_tap => true)
   validates :on_tap, :uniqueness => true, :if => :on_tap?
+  validates_presence_of :brewery, :name
 
   def self.currently_on_tap
     on_tap.first
