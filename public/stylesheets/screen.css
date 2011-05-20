@@ -53,7 +53,7 @@ body {
 header { width:1000px; height:68px; }
 	header h1 { 
 		width:245px; height:126px; 
-		background:url(../images/sprite.png) no-repeat 0 0; 
+		background:url(../images/sprite_v2.png) no-repeat 0 0; 
 		margin:0 0 0 -8px; position:absolute; 
 	}
 
@@ -95,11 +95,12 @@ header { width:1000px; height:68px; }
 	position:absolute; padding:20px;
 	margin:73px 0 0 520px;
 }
+#kegometrics #arrow { position:absolute; width:87px; height:62px; background:url(../images/sprite_v2.png) no-repeat -376px 0; top:207px; left:-87px; }
 #kegometrics .content { float:left; margin-top:-25px; padding-left:3px; }
 #kegometrics h2 { 
 	position:relative; top:-32px; left:-32px; 
 	width:248px; height:56px; 
-	background:url(../images/sprite.png) no-repeat -248px -63px;
+	background:url(../images/sprite_v2.png) no-repeat -248px -63px;
 	margin:0; padding:0;
 }
 #kegometrics h3 { color:#222; font-size:20px; margin:12px 0 9px 0; }
@@ -110,7 +111,7 @@ header { width:1000px; height:68px; }
 #kegometrics table .even td { background:#eee; }
 #kegometrics .more { clear:both; text-align:right; padding:0; margin-bottom:0; background:none; font-size:12px; text-shadow:none; width:430px; }
 
-#banner .vote { width:100%; background:none; text-align:left; }
+#banner .vote { width:100%; background:none; text-align:left; clear:both; }
 #banner .vote a {
     -moz-border-radius:5px;
 	border-radius:10px;
@@ -147,7 +148,7 @@ header { width:1000px; height:68px; }
 #on_tap h2 { 
 	position:relative; top:-32px; left:-32px; 
 	width:98px; height:56px; 
-	background:url(../images/sprite.png) no-repeat -254px 0;
+	background:url(../images/sprite_v2.png) no-repeat -254px 0;
 	margin:0; 
 }
 #on_tap .content { width:; float:left; margin-top:-25px; width:200px; padding-left:6px; }

@@ -21,7 +21,8 @@
         %option{:value => 4} 4
         %option{:value => 5} 5
       %input{:type => 'button', :value => 'Submit Rating'}
-  %img{:class => 'beer_logo', :src => "/images/beers/#{@currently_on_tap.logo_path if @currently_on_tap}"}/
+  - if brewery=@currently_on_tap.logo_path rescue false
+    %img{:class => 'beer_logo', :src => "/images/beers/#{@currently_on_tap.logo_path if @currently_on_tap}"}/
   %p.more
     %a{:href => '#'} More Info
 #keg_numbers
