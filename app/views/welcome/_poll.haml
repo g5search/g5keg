@@ -2,24 +2,23 @@
   #arrow
   %h2.phark Vote For Next Week's Beer
   .content
-    -#%h3 Current Keg Stats
     .stat
       %h4.pints Pints Left
-      .stat_number 17
+      .stat_number #{@currently_on_tap.remaining_pints rescue 'N/A'}
     .stat
       %h4.capacity Capacity
-      .stat_number 80% 
+      .stat_number #{remaining_percent_of(@currently_on_tap)}
     .progress-container
-      %div{ :style => "width:85%" }
+      %div{ :style => "width:#{remaining_percent_of(@currently_on_tap)}" }
     .sub_stat
       %h5 Date Tapped:
-      %span 5/17/11
+      %span #{date_tapped(@currently_on_tap)}
     .sub_stat
       %h5 Days Tapped:
-      %span 2
+      %span #{days_tapped(@currently_on_tap)}
     .sub_stat
       %h5 Beer:
-      %span Metolius Golden Ale
+      %span #{@currently_on_tap.name rescue 'N/A'}
     .sub_stat
       %h5 Last Updated:
-      %span 5/19/11 at 11:42 AM
+      %span #{last_updated(@currently_on_tap)}
