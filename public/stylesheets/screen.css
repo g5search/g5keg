@@ -97,6 +97,17 @@ header { width:1000px; height:68px; }
 }
 #kegometrics #arrow { position:absolute; width:87px; height:62px; background:url(../images/sprite_v2.png) no-repeat -376px 0; top:207px; left:-87px; }
 #kegometrics .content { float:left; margin-top:-25px; padding-left:3px; }
+#kegometrics .progress-container {
+  border: 1px solid #ccc; 
+  margin: 2px 5px 2px 0; 
+  padding: 3px; 
+  float: left; 
+  background: white;
+  width:420px;
+}
+
+#kegometrics .progress-container > div { background-color: #257aa9; height:30px }
+
 #kegometrics h2 { 
 	position:relative; top:-32px; left:-32px; 
 	width:248px; height:56px; 
