@@ -17,7 +17,7 @@ describe Keg do
   describe 'delegates' do
     it 'name, description, ibus to beer' do
       a_keg = Keg.new(:beer => @a_beer)
-      [:name,:description,:ibus,:alcohol].each do |method|
+      [:name,:description,:ibus,:alcohol,:logo_path].each do |method|
         a_keg.send(method).should == @a_beer.send(method)
       end
     end
