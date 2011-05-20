@@ -24,7 +24,7 @@ class Keg < ActiveRecord::Base
   # Based on rigorous testing (emmm...consumption) we have determined
   # that a pint is approximately 0.45 kg.
   def remaining_pints
-    ((current_weight-11)/0.45).to_i
+    ((current_weight-14)/0.45).to_i
   end
 
   # There are 124 pints in a keg (according to the Googs)
