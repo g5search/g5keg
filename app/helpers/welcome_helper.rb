@@ -12,6 +12,6 @@ module WelcomeHelper
   end
 
   def last_updated(keg)
-    keg.updated_at.strftime('%m/%d/%y at %l:%M:%S %p UTC') rescue 'N/A'
+    (keg.updated_at-8.hours).strftime('%m/%d/%y at %l:%M:%S %p') rescue 'N/A'
   end
 end
