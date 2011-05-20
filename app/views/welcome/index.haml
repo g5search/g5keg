@@ -15,6 +15,4 @@
   - if brewery=@currently_on_tap.logo_path rescue false
     %img{:class => 'beer_logo', :src => "/images/beers/#{@currently_on_tap.logo_path if @currently_on_tap}"}/
   %p.more
-    %a{:href => '#'} More Info
-#keg_numbers
-
+    %a{:href => "/beers/#{@currently_on_tap.id if @currently_on_tap}"} More Info

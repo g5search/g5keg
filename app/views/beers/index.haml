@@ -1,6 +1,10 @@
-%h1 The Beers
+%h1.beers_header The Beers
 - @beers.each do |beer|
   %article
+    - if beer.logo_path
+      %img{:class => 'beer_logo', :src => "/images/beers/#{beer.logo_path}"}
+    - else
+      %img{:class => 'beer_logo', :src => "/images/beers/blank.png"}
     %h2= beer.name
     %p= beer.description
     %p

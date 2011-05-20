@@ -1,6 +1,6 @@
 - if @beer.logo_path?
   %p.logo
-    %img{:src => "#{@beer.logo_url}"}/
+    %img{:src => "#{@beer.logo_path}"}/
 %h1= @beer.name
 %p= @beer.description
 %p
