@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110520023637) do
+ActiveRecord::Schema.define(:version => 20110520083228) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -66,8 +66,8 @@ ActiveRecord::Schema.define(:version => 20110520023637) do
     t.integer  "beer_id"
     t.date     "tapped"
     t.date     "kicked"
-    t.decimal  "starting_weight", :precision => 8, :scale => 2
-    t.decimal  "ending_weight",   :precision => 8, :scale => 2
+    t.decimal  "current_weight"
+    t.decimal  "ending_weight"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
