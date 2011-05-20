@@ -8,10 +8,10 @@ module WelcomeHelper
   end
 
   def days_tapped(keg)
-    distance_of_time_in_words(Date.today.to_time,@currently_on_tap.tapped.to_time) rescue '0'
+    distance_of_time_in_words(Time.now,@currently_on_tap.created_at) rescue '0'
   end
 
   def last_updated(keg)
-    keg.updated_at.strftime('%m/%d/%y at %I:%M:%S %p') rescue 'N/A'
+    keg.updated_at.strftime('%m/%d/%y at %l:%M:%S %p UTC') rescue 'N/A'
   end
 end

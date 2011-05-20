@@ -17,7 +17,7 @@ class Keg < ActiveRecord::Base
   end
 
   def assign_weight
-    self.current_weight = 65 unless self.current_weight?
+    self.current_weight = 67 unless self.current_weight?
   end
 
   # We are assuming keg weight is 11 kg (for now)

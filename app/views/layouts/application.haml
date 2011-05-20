@@ -15,6 +15,8 @@
       %header
         %a{:href => '/'}  
           %h1.phark G5 Kegalytics
+        -if signed_in?
+          %div#username Hi, #{current_user.name}
         %nav#nav
           %li
             %a{:href => '#'} On Tap
@@ -23,8 +25,6 @@
           %li
             %a{:href => '/beers'} The Beers
           -if signed_in?
-            %li#user
-              Hi #{current_user.name}
             %li
               %a{:href => '/logout'} Logout
           -else
