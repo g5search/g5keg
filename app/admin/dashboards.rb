@@ -31,5 +31,10 @@ ActiveAdmin::Dashboards.build do
   #   section "Recent User", :priority => 1
   #
   # Will render the "Recent Users" then the "Recent Posts" sections on the dashboard.
-
+  
+  section "Switch Keg" do
+    div do
+      render('/admin/dashboard/switch_keg', :model => 'dashboards')
+    end
+  end
 end

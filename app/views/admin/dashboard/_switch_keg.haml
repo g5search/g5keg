@@ -1,0 +1,3 @@
+= form_for :keg, :url => rotate_path do |f|
+  = f.select(:beer_id, Beer.all.collect { |b| [b.name, b.id] }, { :include_blank => true })
+  = f.submit 'Rotate Keg'
