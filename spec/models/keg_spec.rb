@@ -1,10 +1,6 @@
 require 'spec_helper'
 
 describe Keg do
-  before do
-    @beer = Factory.create(:beer)
-  end
-
   it 'belongs to a beer' do
     subject.should respond_to(:beer)
   end
@@ -19,7 +15,7 @@ describe Keg do
     it 'name, description, ibus to beer' do
       keg = Factory.build(:keg)
       [:name,:description,:ibus,:alcohol,:logo_path].each do |method|
-        keg.send(method).should == @beer.send(method)
+        keg.send(method).should == keg.beer.send(method)
       end
     end
   end
@@ -37,7 +33,7 @@ describe Keg do
 
   describe '#current' do
     it 'returns the first on tap keg' do
-      @new_keg = Factory(:keg, :beer => @beer, :tapped => Date.today)
+      @new_keg = Factory(:keg, :tapped => Date.today)
       Keg.current.should == @new_keg
     end
   end
@@ -64,5 +60,15 @@ describe Keg do
       Keg.rotate(@new_keg)
       old_keg.reload.kicked.should == Date.today
     end
+  end
+
+  it "calculates remaining pints from it's current_weight" do
+    keg = Factory.build(:keg, :current_weight => 25)
+    keg.remaining_pints.should be_within(1).of(31)
+  end
+
+  it "calculates remaining percentage from remaining pints" do
+    keg = Factory.build(:keg, :current_weight => 40)
+    (keg.remaining_percent).should be_within(0.01).of(0.51)
   end
 end
