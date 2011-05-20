@@ -10,17 +10,8 @@
       %span= @currently_on_tap.ibus if @currently_on_tap
       %strong Alcohol
       = @currently_on_tap.alcohol if @currently_on_tap
-    %p
-      %strong Rate Me:
-    %form{:class => 'rating', :title => 'Average Rating: 2', :action => '#'}
-      %label{:for => 'r2', :class => 'avg'} Rate Me!
-      %select#r2
-        %option{:value => 1} 1
-        %option{:value => 2} 2
-        %option{:value => 3} 3
-        %option{:value => 4} 4
-        %option{:value => 5} 5
-      %input{:type => 'button', :value => 'Submit Rating'}
+    - if @currently_on_tap
+      = render 'beers/rate', :beer => @currently_on_tap.beer
   - if brewery=@currently_on_tap.logo_path rescue false
     %img{:class => 'beer_logo', :src => "/images/beers/#{@currently_on_tap.logo_path if @currently_on_tap}"}/
   %p.more
