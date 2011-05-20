@@ -2,6 +2,24 @@
   #arrow
   %h2.phark Vote For Next Week's Beer
   .content
-    %h3 Current Keg Stats
+    -#%h3 Current Keg Stats
+    .stat
+      %h4.pints Pints Left
+      .stat_number 17
+    .stat
+      %h4.capacity Capacity
+      .stat_number 80% 
     .progress-container
-      %div{ :style => 'width:75%' }
+      %div{ :style => "width:85%" }
+    .sub_stat
+      %h5 Date Tapped:
+      %span 5/17/11
+    .sub_stat
+      %h5 Days Tapped:
+      %span 2
+    .sub_stat
+      %h5 Beer:
+      %span Metolius Golden Ale
+    .sub_stat
+      %h5 Last Updated:
+      %span 5/19/11 at 11:42 AM
