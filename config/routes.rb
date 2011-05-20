@@ -55,6 +55,7 @@ G5keg::Application.routes.draw do
   resources :beers
   post '/kegs/rotate(/:beer_id)', :to => 'kegs#rotate', :as => 'rotate'
   post '/kegs/current_weight/:kilograms', :to => 'kegs#current_weight'
+  get 'redirect_to_login', :to => 'application#redirect_to_login', :as => 'redirect'
   root :to => "welcome#index"
 
   # See how all your routes lay out with "rake routes"

@@ -10,4 +10,13 @@ class ApplicationController < ActionController::Base
   def signed_in?
     !!current_user
   end
+
+  def require_user
+    signed_in? || redirect_to_login
+  end
+
+  def redirect_to_login
+    redirect_to '/login?domain=g5searchmarketing.com'
+    return false
+  end
 end
