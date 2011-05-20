@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110520083228) do
+ActiveRecord::Schema.define(:version => 20110520142713) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -74,5 +74,14 @@ ActiveRecord::Schema.define(:version => 20110520083228) do
 
   add_index "kegs", ["beer_id"], :name => "index_kegs_on_beer_id"
   add_index "kegs", ["tapped", "kicked"], :name => "index_kegs_on_tapped_and_kicked"
+
+  create_table "users", :force => true do |t|
+    t.string   "identity"
+    t.string   "email"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
