@@ -33,5 +33,6 @@ gem 'sqlite3'
 # end
 group :test, :development do
   gem "rspec-rails"
+  gem "factory_girl_rails", "1.1.beta1"
 end
 
