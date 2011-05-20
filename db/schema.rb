@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110520142713) do
+ActiveRecord::Schema.define(:version => 20110520175738) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -74,6 +74,22 @@ ActiveRecord::Schema.define(:version => 20110520142713) do
 
   add_index "kegs", ["beer_id"], :name => "index_kegs_on_beer_id"
   add_index "kegs", ["tapped", "kicked"], :name => "index_kegs_on_tapped_and_kicked"
+
+  create_table "rates", :force => true do |t|
+    t.integer "score"
+  end
+
+  create_table "ratings", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "rate_id"
+    t.integer  "rateable_id"
+    t.string   "rateable_type", :limit => 32
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ratings", ["rate_id"], :name => "index_ratings_on_rate_id"
+  add_index "ratings", ["rateable_id", "rateable_type"], :name => "index_ratings_on_rateable_id_and_rateable_type"
 
   create_table "users", :force => true do |t|
     t.string   "identity"
