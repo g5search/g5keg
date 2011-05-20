@@ -22,6 +22,14 @@
             %a{:href => '#'} Keg By The Numbers
           %li
             %a{:href => '/beers'} The Beers
+          -if signed_in?
+            %li#user
+              Hi #{current_user.name}
+            %li
+              %a{:href => '/logout'} Logout
+          -else
+            %li
+              %a{:href => '/login'} Login
       %section#banner
         = render :partial => 'welcome/poll' if request.fullpath == '/'
         %h2 Monitor. Analyze. Drink
