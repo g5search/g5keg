@@ -65,6 +65,5 @@ describe Keg do
       Keg.rotate(@a_new_keg)
       old_keg.reload.kicked.should == Date.today
     end
-    it 'queries via an api the starting weight of the keg on top'
   end
 end
