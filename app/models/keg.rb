@@ -1,6 +1,7 @@
 class Keg < ActiveRecord::Base
   belongs_to :beer
   scope :on_tap, where('tapped is not null and kicked is null')
+  before_create :assign_weight
   validates_presence_of :beer
   delegate :name, :description, :ibus, :alcohol, :logo_path, :to => :beer
 
@@ -13,6 +14,10 @@ class Keg < ActiveRecord::Base
       old_keg.update_attribute(:kicked, Date.today)
     end
     new_keg.update_attribute(:tapped, Date.today)
+  end
+
+  def assign_weight
+    self.current_weight = 65 unless self.current_weight?
   end
 
   # We are assuming keg weight is 11 kg (for now)

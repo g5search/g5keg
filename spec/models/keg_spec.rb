@@ -9,6 +9,11 @@ describe Keg do
     subject.errors_on(:beer).should_not be_empty
   end
 
+  it 'defaults to a current_weight of 65kg' do
+    keg = Factory.create(:keg)
+    keg.current_weight.to_i.should eql(65)
+  end
+
   it "has a base keg weight through it's beer's brewery"
 
   describe 'delegates' do
