@@ -19,12 +19,12 @@
           %div#username Hi, #{current_user.name}
         %nav#nav
           %li{:class => request.fullpath == '/' ? 'on' : ''}
-            %a{:href => '#'} Home
+            %a{:href => '/'} Home
           -# %li
             -# %a{:href => '#'} On Tap
           %li
             %a{:href => '#'} Keg By The Numbers
-          %li
+          %li{:class => request.fullpath == '/beers' ? 'on' : ''}
             %a{:href => '/beers'} The Beers
           -if signed_in?
             %li

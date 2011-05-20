@@ -50,7 +50,7 @@ body {
 
 #wrapper { width:1000px; margin:0 auto; }
 
-header { width:1000px; height:68px; }
+header { width:1000px; height:68px; position;r }
 	header h1 { 
 		width:245px; height:126px; 
 		background:url(../images/sprite_v2.png) no-repeat 0 0; 
@@ -97,7 +97,7 @@ header { width:1000px; height:68px; }
 
 #nav li a:hover, #nav .on a { color:#fff; background:#16223b; text-decoration:none; }
 
-div#username { display: absolute; float:right; padding-top: 10px; text-align:right; color: #ccc; }
+div#username { position: absolute; float:right; padding-top: 10px; text-align:right; color: #ccc; left:50%; margin-left:415px; }
 
 #kegometrics { 
   -moz-border-radius:10px;
