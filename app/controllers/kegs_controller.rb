@@ -5,4 +5,9 @@ class KegsController < ApplicationController
     flash[:notice] = 'Keg rotated'
     redirect_to :back
   end
+
+  def current_weight
+    Keg.current.update_attribute(:current_weight, params[:kilograms])
+    render :nothing => true
+  end
 end

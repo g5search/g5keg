@@ -25,4 +25,12 @@ describe KegsController do
       response.should be_redirect
     end
   end
+
+  describe '#current_weight' do
+    it "updates the current keg's with the posted weight" do
+      keg = Factory(:keg, :tapped => Date.today)
+      post :current_weight, :kilograms => 40
+      keg.reload.current_weight.should == 40
+    end
+  end
 end
