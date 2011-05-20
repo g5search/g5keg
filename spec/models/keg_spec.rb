@@ -22,7 +22,7 @@ describe Keg do
       end
     end
   end
-  describe 'Keg#on_tap' do
+  describe 'on tap' do
     it 'is on tap if tapped and not kicked' do
       a_tapped_keg = Keg.create(:tapped => Date.today,
         :beer => @a_beer)
@@ -35,6 +35,14 @@ describe Keg do
       Keg.on_tap.should_not include(a_finished_keg)
     end
   end
+
+  describe '#current' do
+    it 'returns the first on tap keg' do
+      @a_new_keg = Keg.create(:beer => @a_beer, :tapped => Date.today)
+      Keg.current.should == @a_new_keg
+    end
+  end
+
   describe '#rotate' do
     before do
       @a_new_keg = Keg.create(:beer => @a_beer)
