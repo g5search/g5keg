@@ -10,5 +10,6 @@ class BeersController < ApplicationController
   def rate
     @beer = Beer.find(params[:id])
     @beer.rate_it(params[:rating], current_user)
+    redirect_to :back
   end
 end

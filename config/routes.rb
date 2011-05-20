@@ -54,7 +54,7 @@ G5keg::Application.routes.draw do
   # just remember to delete public/index.html.
   resources :beers do
     member do
-      get 'rate'
+      post 'rate'
     end
   end
 

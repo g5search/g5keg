@@ -1,12 +1,9 @@
 - if signed_in?
   %p
     %strong My Rating:
-  %form{:class => 'rating', :title => "Average Rating: 3", :action => '#'}
-    %label{:for => 'r2', :class => 'avg'} Rate Me!
-    %select#r2
-      %option{:value => 1} 1
-      %option{:value => 2} 2
-      %option{:value => 3} 3
-      %option{:value => 4} 4
-      %option{:value => 5} 5
-    %input{:type => 'button', :value => 'Submit Rating'}
+  = form_for '', :url => rate_beer_path(beer), :html => { :class => 'rating' } do |f|
+    = f.select(:rating,
+      %w(1 2 3 4 5),
+      {:selected => beer.rating_for_user(current_user)},
+      {:id => 'r2'})
+    = f.submit 'Submit Rating'
