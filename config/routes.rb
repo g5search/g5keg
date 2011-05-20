@@ -54,7 +54,7 @@ G5keg::Application.routes.draw do
   # just remember to delete public/index.html.
   resources :beers
   post '/kegs/rotate(/:beer_id)', :to => 'kegs#rotate', :as => 'rotate'
-  post '/kegs/current_weight/:kilograms', :to => 'kegs#current_weight'
+  post '/kegs/current_weight', :to => 'kegs#current_weight'
   match '/login' => 'auth#create'
   match '/logout' => 'auth#destroy'
   match '/setup' => 'auth#setup'

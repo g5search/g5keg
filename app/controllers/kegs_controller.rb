@@ -7,7 +7,7 @@ class KegsController < ApplicationController
   end
 
   def current_weight
-    Keg.current.update_attribute(:current_weight, params[:kilograms])
+    Keg.current.update_attribute(:current_weight, params[:kg])
     render :nothing => true
   end
 end
