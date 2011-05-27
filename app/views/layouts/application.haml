@@ -20,8 +20,6 @@
         %nav#nav
           %li{:class => request.fullpath == '/' ? 'on' : ''}
             %a{:href => '/'} Home
-          -# %li
-            -# %a{:href => '#'} On Tap
           %li
             %a{:href => '#'} Keg By The Numbers
           %li{:class => request.fullpath == '/beers' ? 'on' : ''}
@@ -37,4 +35,4 @@
         %h2 Monitor. Analyze. Drink
         %p Never be beerless for an "all hands" again.
       = yield
-    #footer
+    %footer

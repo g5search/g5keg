@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'
 gem 'haml', '3.1.1'
+gem 'sass', '3.1.1'
 gem 'activeadmin'
 
 # Bundle edge Rails instead:
