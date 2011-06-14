@@ -20,11 +20,12 @@ class Keg < ActiveRecord::Base
     self.current_weight = 67 unless self.current_weight?
   end
 
-  # We are assuming keg weight is 11 kg (for now)
+  # We are assuming keg weight is 14 kg (for now)
   # Based on rigorous testing (emmm...consumption) we have determined
   # that a pint is approximately 0.45 kg.
+  
   def remaining_pints
-    ((current_weight-14.25)/0.45).to_i
+    ((current_weight-14.25)/0.45).to_i > 0 ? ((current_weight-14.25)/0.45).to_i : 0
   end
 
   # There are 124 pints in a keg (according to the Googs)
