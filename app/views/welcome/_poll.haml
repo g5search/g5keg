@@ -4,10 +4,10 @@
   .content
     .stat
       %h4.pints Pints Left
-      .stat_number #{@currently_on_tap.remaining_pints rescue 'N/A'}
+      .stat_number= @currently_on_tap.remaining_pints > 0 ? @currently_on_tap.remaining_pints : 0
     .stat
       %h4.capacity Capacity
-      .stat_number #{remaining_percent_of(@currently_on_tap)}
+      .stat_number= remaining_percent_of(@currently_on_tap).to_i > 0 ? emaining_percent_of(@currently_on_tap) : 0
     .progress-container
       %div{ :style => "width:#{remaining_percent_of(@currently_on_tap)}" }
     .sub_stat

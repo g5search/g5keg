@@ -13,6 +13,6 @@
     - if @currently_on_tap
       = render 'beers/rate', :beer => @currently_on_tap.beer
   - if brewery=@currently_on_tap.logo_path rescue false
-    %img{:class => 'beer_logo', :src => "/images/beers/#{@currently_on_tap.logo_path if @currently_on_tap}"}/
+    %img{:class => 'beer_logo', :src => "/images/beers/#{ !@currently_on_tap.logo_path.blank? ? @currently_on_tap.logo_path : "blank.png" }"}/
   %p.more
     %a{:href => "/beers/#{@currently_on_tap.id if @currently_on_tap}"} More Info
