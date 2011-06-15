@@ -464,7 +464,8 @@ article {
   border-bottom: 1px solid #ccc;
   margin-bottom: 0;
   float: left;
-  padding: 3px 12px 20px 12px; }
+  padding: 3px 12px 20px 12px;
+  width: 100%; }
 
 article:hover {
   background: #f7f7f7; }

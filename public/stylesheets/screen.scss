@@ -315,7 +315,14 @@ footer {
 /* BEERS */
 /* ------------------------------------------------------------------------------------ */
 
-article { clear:both; border-bottom:1px solid #ccc; margin-bottom:0; float:left; padding:3px 12px 20px 12px; }
+article { 
+	clear:both; 
+	border-bottom:1px solid #ccc; 
+	margin-bottom:0; 
+	float:left; 
+	padding:3px 12px 20px 12px; 
+	width:100%;
+}
 article:hover { background:#f7f7f7; }
 article .beer_logo { border:1px solid #ccc; padding:6px; background:#fff; float:left; margin:12px 25px 0 0; }
 .beers_header { color:#0c1425; font-size:50px; padding-left:55px; background:url(/images/pint_icon.png) no-repeat 0 0; height:58px;  border-bottom:1px solid #ccc; line-height:46px; margin-top:0; }
