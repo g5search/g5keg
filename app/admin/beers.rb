@@ -1,4 +1,15 @@
 ActiveAdmin.register Beer do
+  
+  # Custom table display
+  index do
+    id_column
+    column :name
+    column("Brewery", :brewery, :sortable => :brewery_id)
+    column :ibus
+    column :alcohol
+    default_actions
+  end
+  
   # Overrides default form to enable image upload
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Details", :multipart => true do
@@ -11,4 +22,5 @@ ActiveAdmin.register Beer do
     end    
     f.buttons
   end
+  
 end
