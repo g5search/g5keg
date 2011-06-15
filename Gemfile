@@ -5,6 +5,8 @@ gem 'haml', '3.1.1'
 gem 'sass', '3.1.1'
 gem 'activeadmin'
 gem 'paperclip'
+gem 'aws-s3'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

@@ -5,7 +5,11 @@ class Beer < ActiveRecord::Base
   acts_as_rateable
   
   # Sets logo upload parameters
-  has_attached_file :logo_path, :styles => { :medium => "190x270" }
+  has_attached_file :logo_path, 
+    :styles => { :medium => "190x270" }, 
+    :default_url => "/images/beers/blank.png",
+    :storage => :s3,
+    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml"
   
   def rating_for_user(user)
     if rating=rated_by?(user)
@@ -17,11 +21,7 @@ class Beer < ActiveRecord::Base
   
   #Sets logo path for display in view
   def beer_logo_path
-    unless self.logo_path.url(:medium) == "/logo_paths/medium/missing.png"
-      self.logo_path.url(:medium)
-    else
-      "/images/beers/blank.png"
-    end
+    self.logo_path.url(:medium)
   end
   
 end
