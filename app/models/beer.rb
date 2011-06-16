@@ -6,7 +6,7 @@ class Beer < ActiveRecord::Base
   
   # Sets logo upload parameters
   has_attached_file :logo_path, 
-    :styles => { :medium => "190x270" }, 
+    :styles => { :medium => "190x270!" }, 
     :default_url => "/images/beers/blank.png",
     :storage => :s3,
     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml"
