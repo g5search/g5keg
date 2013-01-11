@@ -5,6 +5,7 @@ gem 'haml', '3.1.1'
 gem 'sass', '3.1.1'
 gem 'activeadmin'
 gem 'paperclip'
+gem 'aws-sdk'
 gem 'aws-s3'
 
 
