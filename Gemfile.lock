@@ -96,7 +96,7 @@ GEM
       activesupport (~> 3.0.2)
       arel (~> 2.0.2)
     mime-types (1.19)
-    multi_json (1.5.0)
+    multi_json (1.6.0)
     multi_xml (0.5.2)
     nokogiri (1.5.6)
     oauth (0.4.6)
