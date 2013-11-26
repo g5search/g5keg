@@ -1,4 +1,5 @@
-source 'http://rubygems.org'
+source "https://rubygems.org"
+ruby "1.9.3"
 
 gem 'rails', '3.0.20'
 gem 'haml', '3.1.1'
@@ -9,12 +10,13 @@ gem 'activeadmin', '0.2.1'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'aws-s3'
-
+gem 'unicorn'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'sqlite3', group: [:development, :test]
+gem 'pg', group: :production
 
 # Auth
 gem 'oauth'
@@ -50,4 +52,3 @@ group :test, :development do
   gem "rspec-rails"
   gem "factory_girl_rails", "1.1.beta1"
 end
-
