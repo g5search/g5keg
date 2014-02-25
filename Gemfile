@@ -5,7 +5,7 @@ gem 'rails', '3.2.17'
 gem 'dotenv-rails'
 gem 'haml-rails'
 gem 'sass'
-gem "activeadmin", "0.6.0"
+gem "activeadmin", "0.6.3"
 gem 'meta_search', '>= 1.1.0.pre'
 gem 'paperclip'
 gem 'aws-sdk'
