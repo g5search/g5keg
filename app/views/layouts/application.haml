@@ -4,9 +4,8 @@
   %head
     %meta{:charset=>'utf-8', 'http-equiv' => "Refresh",  :content => "25"}
     %title G5 Kegalytics
-    %link{:rel=>'stylesheet',:href=>'/stylesheets/screen.css',:media=> 'all',:type => 'text/css'}
-    %script{:type => "text/javascript", :src  => "/javascripts/jquery.js"}
-    %script{:type => "text/javascript", :src  => "/javascripts/jquery.rating.js"}
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
     :javascript
       jQuery(function(){
         jQuery('form.rating').rating().animate({opacity: 'show'}, 2000);
@@ -14,7 +13,7 @@
   %body
     #wrapper
       %header
-        %a{:href => '/'}  
+        %a{:href => '/'}
           %h1.phark G5 Kegalytics
         -if signed_in?
           %div#username Hi, #{current_user.name}
