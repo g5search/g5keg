@@ -1,12 +1,11 @@
 source "https://rubygems.org"
 ruby "1.9.3"
 
-gem 'rails', '3.1.12'
-gem 'haml', '3.1.1'
+gem 'rails', '3.2.17'
+gem 'dotenv-rails'
+gem 'haml-rails'
 gem 'sass'
-gem 'formtastic', '1.2.3'
-gem 'inherited_resources', '1.2.2'
-gem 'activeadmin'
+gem "activeadmin", "0.6.0"
 gem 'meta_search', '>= 1.1.0.pre'
 gem 'paperclip'
 gem 'aws-sdk'
@@ -16,9 +15,9 @@ gem 'unicorn'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', " ~> 3.1.0"
-  gem 'coffee-rails', " ~> 3.1.0"
-  gem 'uglifier'
+  gem 'sass-rails', '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
