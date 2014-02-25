@@ -1,12 +1,14 @@
 source "https://rubygems.org"
 ruby "1.9.3"
 
-gem 'rails', '3.0.20'
+gem 'rails', '3.1.12'
 gem 'haml', '3.1.1'
-gem 'sass', '3.1.1'
+gem 'sass'
 gem 'formtastic', '1.2.3'
 gem 'inherited_resources', '1.2.2'
-gem 'activeadmin', '0.2.1'
+gem 'activeadmin'
+gem 'sass-rails'
+gem "meta_search", '>= 1.1.0.pre'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'aws-s3'
