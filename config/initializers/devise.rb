@@ -55,6 +55,7 @@ Devise.setup do |config|
 
   # Setup a pepper to generate the encrypted password.
   # config.pepper = "dbf97513e92700ccbe58ae4333826291b41ac358fb9aeb1084b282b9d4ed21a77c04fd2998bf99a1b125cc61e6af6273992197de40a39e9b457f5c4794b444f2"
+  config.secret_key = ENV['CONFIG_SECRET']
 
   # ==> Configuration for :confirmable
   # The time you want to give your user to confirm his account. During this time
@@ -80,7 +81,7 @@ Devise.setup do |config|
 
   # If true, uses the password salt as remember token. This should be turned
   # to false if you are not using database authenticatable.
-  config.use_salt_as_remember_token = true
+  # config.use_salt_as_remember_token = true
 
   # Options to be passed to the created cookie. For instance, you can set
   # :secure => true in order to force SSL only cookies.

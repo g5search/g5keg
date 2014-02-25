@@ -1,16 +1,26 @@
 source "https://rubygems.org"
 ruby "1.9.3"
 
-gem 'rails', '3.0.20'
-gem 'haml', '3.1.1'
-gem 'sass', '3.1.1'
-gem 'formtastic', '1.2.3'
-gem 'inherited_resources', '1.2.2'
-gem 'activeadmin', '0.2.1'
+gem 'rails', '3.2.17'
+gem 'dotenv-rails'
+gem 'haml-rails'
+gem 'sass'
+gem "activeadmin", "0.6.3"
+gem 'meta_search', '>= 1.1.0.pre'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'aws-s3'
 gem 'unicorn'
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails', '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'uglifier', '>= 1.0.3'
+end
+
+gem 'jquery-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
