@@ -113,7 +113,7 @@ GEM
       has_scope (~> 0.6.0.rc)
       responders (~> 1.0.0.rc)
     journey (1.0.4)
-    jquery-rails (3.1.0)
+    jquery-rails (2.3.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
@@ -234,7 +234,7 @@ DEPENDENCIES
   dotenv-rails
   factory_girl_rails (= 1.1.beta1)
   haml-rails
-  jquery-rails
+  jquery-rails (< 3.0.0)
   meta_search (>= 1.1.0.pre)
   oauth
   paperclip
