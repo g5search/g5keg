@@ -2,6 +2,8 @@ G5 Keg App
 
 Pull the app.
 
+    bundle
+
     heroku db:pull
 
     rails s
