@@ -7,3 +7,22 @@ Pull the app.
     rails s
 
 Away you go.
+
+----------------------------------------
+
+11/17/16 Update
+
+Remove this from your gemfile
+```gem 'ruby-openid-apps-discovery',
+  :git => 'git://github.com/skrat/ruby-openid-apps-discovery.git',
+  :require => 'gapps_openid'
+```
+and replace it with
+```gem 'ruby-openid-apps-discovery', :require => 'gapps_openid'
+```
+
+`Bundle exec`
+
+Move `database.yml` into /config
+
+Pull down the db `heroku pg:pull DATABASE_URL keg -a g5keg`
