@@ -31,9 +31,7 @@ gem 'pg', group: :production
 # Auth
 gem 'oauth'
 gem 'ruby-openid', :require => 'openid'
-gem 'ruby-openid-apps-discovery',
-  :git => 'git://github.com/skrat/ruby-openid-apps-discovery.git',
-  :require => 'gapps_openid'
+gem 'ruby-openid-apps-discovery', :require => 'gapps_openid'
 gem 'rack-openid', :require => 'rack/openid'
 
 # Use unicorn as the web server

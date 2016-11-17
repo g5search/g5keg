@@ -37,7 +37,7 @@ describe ApplicationController do
   describe '#redirect_to_login' do
     it 'redirects' do
       get :redirect_to_login
-      response.should redirect_to('/login?domain=g5searchmarketing.com')
+      response.should redirect_to('/admin/login')
     end
   end
 end

@@ -64,8 +64,6 @@ G5keg::Application.routes.draw do
   match '/setup' => 'auth#setup'
   match 'redirect_to_login' => 'application#redirect_to_login', :as => 'redirect'
 
-  # Google Marketplace routes
-  match '/support' => 'welcome#support'
 
   # Index
   root :to => "welcome#index"

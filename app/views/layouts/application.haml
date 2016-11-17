@@ -29,7 +29,7 @@
               %a{:href => '/logout'} Logout
           -else
             %li
-              %a{:href => '/login'} Login
+              %a{:href => 'admin/login'} Login
       %section#banner
         = render :partial => 'welcome/poll' if request.fullpath == '/'
         %h2 Monitor. Analyze. Drink

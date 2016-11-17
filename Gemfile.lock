@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/skrat/ruby-openid-apps-discovery.git
-  revision: 54746d499c79e10d9073bf0654786d97fe963dab
-  specs:
-    ruby-openid-apps-discovery (1.01)
-      ruby-openid (>= 2.1.7)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -192,6 +185,8 @@ GEM
       railties (>= 3.0)
       rspec (~> 2.11.0)
     ruby-openid (2.5.0)
+    ruby-openid-apps-discovery (1.2.0)
+      ruby-openid (>= 2.1.7)
     sass (3.2.14)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -243,12 +238,15 @@ DEPENDENCIES
   rails (= 3.2.18)
   rspec-rails
   ruby-openid
-  ruby-openid-apps-discovery!
+  ruby-openid-apps-discovery
   sass
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
   unicorn
 
+RUBY VERSION
+   ruby 1.9.3p484
+
 BUNDLED WITH
-   1.10.6
+   1.13.6
